@@ -1,6 +1,6 @@
-const app = require("./app");
-const database = require("./database");
-const config = require("./config");
+const app = require('./app');
+const database = require('./database');
+const config = require('./config');
 
 database()
   .then(info => {
@@ -10,7 +10,6 @@ database()
     );
   })
   .catch(() => {
-    console.error("Unable to connect to database");
-    // eslint-disable-next-line no-process-exit
+    console.error('Unable to connect to database');
     process.exit(1);
   });
